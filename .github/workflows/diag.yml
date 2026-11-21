@@ -2,7 +2,7 @@ name: Diagnostic model comparison
 on:
   push:
     branches: [diag/model-compare]
-    paths: [diag/compare.mjs]
+    paths: [diag/probe.mjs]
 permissions:
   contents: write
 jobs:
@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
         with: { node-version: 22 }
-      - run: node diag/compare.mjs
+      - run: node diag/probe.mjs
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add diag/result.json && git commit -m "Diagnostic result" && git push
+          git add diag/samples && git commit -m "Probe samples" && git push
