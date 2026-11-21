@@ -1,0 +1,133 @@
+{
+ "ens_daily": {
+  "status": 200,
+  "ms": 873,
+  "bytes": 69464,
+  "acao": null,
+  "ctype": "application/json; charset=utf-8"
+ },
+ "ens_daily_minmax": {
+  "status": 200,
+  "ms": 161,
+  "bytes": 14730,
+  "acao": null,
+  "ctype": "application/json; charset=utf-8"
+ },
+ "om_multi": {
+  "err": "TypeError: fetch failed"
+ },
+ "points": {
+  "heavenly": "REV 36,81",
+  "northstar": "REV 32,96",
+  "kirkwood": "STO 91,63",
+  "donner": "STO 88,93",
+  "brockway": "REV 34,96",
+  "echo": "STO 93,69",
+  "carson": "STO 90,63"
+ },
+ "nws_points_heavenly": {
+  "status": 200,
+  "ms": 149,
+  "bytes": 3936,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_grid_heavenly": {
+  "status": 200,
+  "ms": 14,
+  "bytes": 193460,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_points_northstar": {
+  "status": 200,
+  "ms": 198,
+  "bytes": 3931,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_grid_northstar": {
+  "status": 200,
+  "ms": 76,
+  "bytes": 188203,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_points_kirkwood": {
+  "status": 200,
+  "ms": 142,
+  "bytes": 3916,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_grid_kirkwood": {
+  "status": 200,
+  "ms": 15,
+  "bytes": 205344,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_points_donner": {
+  "status": 200,
+  "ms": 212,
+  "bytes": 3932,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_grid_donner": {
+  "status": 200,
+  "ms": 162,
+  "bytes": 205186,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_points_brockway": {
+  "status": 200,
+  "ms": 245,
+  "bytes": 3933,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_grid_brockway": {
+  "status": 200,
+  "ms": 155,
+  "bytes": 195696,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_points_echo": {
+  "status": 200,
+  "ms": 193,
+  "bytes": 3938,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_grid_echo": {
+  "status": 200,
+  "ms": 151,
+  "bytes": 200016,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_points_carson": {
+  "status": 200,
+  "ms": 185,
+  "bytes": 3932,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_grid_carson": {
+  "status": 200,
+  "ms": 165,
+  "bytes": 206639,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ },
+ "nws_noua_kirkwood": {
+  "status": 200,
+  "ms": 81,
+  "bytes": 3916,
+  "acao": "*",
+  "ctype": "application/geo+json"
+ }
+}

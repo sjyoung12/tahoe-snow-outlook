@@ -1,0 +1,112 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            }
+        }
+    ],
+    "id": "https://api.weather.gov/points/39.262,-120.058",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -120.058,
+            39.262
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/points/39.262,-120.058",
+        "@type": "wx:Point",
+        "cwa": "REV",
+        "type": "land",
+        "forecastOffice": "https://api.weather.gov/offices/REV",
+        "gridId": "REV",
+        "gridX": 34,
+        "gridY": 96,
+        "forecast": "https://api.weather.gov/gridpoints/REV/34,96/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/REV/34,96/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/REV/34,96",
+        "observationStations": "https://api.weather.gov/gridpoints/REV/34,96/stations",
+        "relativeLocation": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.058578,
+                    39.2467999
+                ]
+            },
+            "properties": {
+                "city": "Tahoe Vista",
+                "state": "CA",
+                "distance": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 424.37245912706
+                },
+                "bearing": {
+                    "unitCode": "wmoUnit:degree_(angle)",
+                    "value": 1
+                }
+            }
+        },
+        "forecastZone": "https://api.weather.gov/zones/forecast/CAZ072",
+        "county": "https://api.weather.gov/zones/county/CAC061",
+        "fireWeatherZone": "https://api.weather.gov/zones/fire/CAZ272",
+        "timeZone": "America/Los_Angeles",
+        "radarStation": "KRGX",
+        "astronomicalData": {
+            "sunrise": "2026-11-21T06:50:41-08:00",
+            "sunset": "2026-11-21T16:41:40-08:00",
+            "transit": "2026-11-21T11:46:10-08:00",
+            "civilTwilightBegin": "2026-11-21T06:21:44-08:00",
+            "civilTwilightEnd": "2026-11-21T17:10:37-08:00",
+            "nauticalTwilightBegin": "2026-11-21T05:49:00-08:00",
+            "nauticalTwilightEnd": "2026-11-21T17:43:20-08:00",
+            "astronomicalTwilightBegin": "2026-11-21T05:17:04-08:00",
+            "astronomicalTwilightEnd": "2026-11-21T18:15:16-08:00"
+        },
+        "nwr": {
+            "transmitter": "WXK58",
+            "sameCode": "006061",
+            "areaBroadcast": "https://api.weather.gov/radio/WXK58/broadcast",
+            "pointBroadcast": "https://api.weather.gov/points/39.262,-120.058/radio"
+        }
+    }
+}

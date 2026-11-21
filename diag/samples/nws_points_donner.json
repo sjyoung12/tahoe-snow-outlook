@@ -1,0 +1,112 @@
+{
+    "@context": [
+        "https://geojson.org/geojson-ld/geojson-context.jsonld",
+        {
+            "@version": "1.1",
+            "wx": "https://api.weather.gov/ontology#",
+            "s": "https://schema.org/",
+            "geo": "http://www.opengis.net/ont/geosparql#",
+            "unit": "http://codes.wmo.int/common/unit/",
+            "@vocab": "https://api.weather.gov/ontology#",
+            "geometry": {
+                "@id": "s:GeoCoordinates",
+                "@type": "geo:wktLiteral"
+            },
+            "city": "s:addressLocality",
+            "state": "s:addressRegion",
+            "distance": {
+                "@id": "s:Distance",
+                "@type": "s:QuantitativeValue"
+            },
+            "bearing": {
+                "@type": "s:QuantitativeValue"
+            },
+            "value": {
+                "@id": "s:value"
+            },
+            "unitCode": {
+                "@id": "s:unitCode",
+                "@type": "@id"
+            },
+            "forecastOffice": {
+                "@type": "@id"
+            },
+            "forecastGridData": {
+                "@type": "@id"
+            },
+            "publicZone": {
+                "@type": "@id"
+            },
+            "county": {
+                "@type": "@id"
+            }
+        }
+    ],
+    "id": "https://api.weather.gov/points/39.316,-120.326",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            -120.326,
+            39.316
+        ]
+    },
+    "properties": {
+        "@id": "https://api.weather.gov/points/39.316,-120.326",
+        "@type": "wx:Point",
+        "cwa": "STO",
+        "type": "land",
+        "forecastOffice": "https://api.weather.gov/offices/STO",
+        "gridId": "STO",
+        "gridX": 88,
+        "gridY": 93,
+        "forecast": "https://api.weather.gov/gridpoints/STO/88,93/forecast",
+        "forecastHourly": "https://api.weather.gov/gridpoints/STO/88,93/forecast/hourly",
+        "forecastGridData": "https://api.weather.gov/gridpoints/STO/88,93",
+        "observationStations": "https://api.weather.gov/gridpoints/STO/88,93/stations",
+        "relativeLocation": {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.1939432,
+                    39.3505478
+                ]
+            },
+            "properties": {
+                "city": "Truckee",
+                "state": "CA",
+                "distance": {
+                    "unitCode": "wmoUnit:m",
+                    "value": 2102.4955559764
+                },
+                "bearing": {
+                    "unitCode": "wmoUnit:degree_(angle)",
+                    "value": 251
+                }
+            }
+        },
+        "forecastZone": "https://api.weather.gov/zones/forecast/CAZ133",
+        "county": "https://api.weather.gov/zones/county/CAC061",
+        "fireWeatherZone": "https://api.weather.gov/zones/fire/CAZ133",
+        "timeZone": "America/Los_Angeles",
+        "radarStation": "KRGX",
+        "astronomicalData": {
+            "sunrise": "2026-11-21T06:51:53-08:00",
+            "sunset": "2026-11-21T16:42:36-08:00",
+            "transit": "2026-11-21T11:47:14-08:00",
+            "civilTwilightBegin": "2026-11-21T06:22:54-08:00",
+            "civilTwilightEnd": "2026-11-21T17:11:34-08:00",
+            "nauticalTwilightBegin": "2026-11-21T05:50:10-08:00",
+            "nauticalTwilightEnd": "2026-11-21T17:44:19-08:00",
+            "astronomicalTwilightBegin": "2026-11-21T05:18:12-08:00",
+            "astronomicalTwilightEnd": "2026-11-21T18:16:17-08:00"
+        },
+        "nwr": {
+            "transmitter": "WXK58",
+            "sameCode": "006061",
+            "areaBroadcast": "https://api.weather.gov/radio/WXK58/broadcast",
+            "pointBroadcast": "https://api.weather.gov/points/39.316,-120.326/radio"
+        }
+    }
+}
