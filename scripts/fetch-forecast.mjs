@@ -4,7 +4,7 @@
 import { writeFile } from "node:fs/promises";
 import { buildForecast } from "../forecast.js";
 
-const ATTEMPTS = 3;
+const ATTEMPTS = 5; // Open-Meteo is sometimes unreachable from GitHub runners for a minute or two
 const NWS_HEADERS = {
   // The NWS asks API clients to identify themselves
   "User-Agent": "tahoe-snow-outlook (https://github.com/sjyoung12/tahoe-snow-outlook)",
@@ -28,7 +28,7 @@ async function getJSON(url, kind) {
       lastError = `${host} request failed: ${e.cause?.code || e.name}: ${e.cause?.message || e.message}`;
     }
     console.warn(`Attempt ${attempt} of ${ATTEMPTS}: ${lastError}`);
-    if (attempt < ATTEMPTS) await sleep(attempt * 10000);
+    if (attempt < ATTEMPTS) await sleep(attempt * 15000); // 15, 30, 45, 60 s
   }
   throw new Error(lastError);
 }
