@@ -2,7 +2,14 @@
 
 A single-page 15-day outlook for Heavenly, Northstar and Kirkwood: daily snowfall, snow that falls before first chair, high and low temperature, sky during lift hours, gusts (with a "holds likely" flag at 30 mph and up), and a "chains likely / possible" flag for the drive.
 
-The page fetches fresh data from [Open-Meteo](https://open-meteo.com/) every time it loads, in the browser, with no server or API key. If that request fails, it falls back to a snapshot built into the page, and the status chip says "Snapshot" instead of "Live".
+The page fetches fresh data from [Open-Meteo](https://open-meteo.com/) every time it loads, in the browser, with no server or API key. Some networks can't reach Open-Meteo's API, so the page has two fallbacks, used in this order:
+
+1. **`forecast.json`**, an hourly copy saved to this repo by the `Refresh forecast copy` workflow (`.github/workflows/refresh-forecast.yml`, running `scripts/fetch-forecast.mjs`). It's triggered hourly from cron-job.org, with a GitHub schedule as a best-effort backup.
+2. **A snapshot built into `index.html`**, for when even that file is missing.
+
+The status chip says which one you're seeing and how old it is.
+
+Resort and pass locations, the Open-Meteo request and the data shaping live in `forecast.js`, which both the page and the refresh script import.
 
 ## How the numbers are made
 
@@ -20,6 +27,6 @@ These are raw model numbers with no local correction. In big storms, global mode
 
 ## Editing
 
-Everything is in `index.html`. Resorts and passes (coordinates, elevations, routes) are the `RESORTS` and `PASSES` arrays at the top of the script.
+The page is `index.html`. Resorts and passes (coordinates, elevations, routes) are the `RESORTS` and `PASSES` arrays in `forecast.js`.
 
 Weather data by [Open-Meteo.com](https://open-meteo.com/), licensed CC BY 4.0.
